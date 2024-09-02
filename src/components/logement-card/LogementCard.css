@@ -1,6 +1,38 @@
-.link {
-    width: 100%;
+article img {
+    width: 340px;
     height: 340px;
-    color: blueviolet
-    ;
+    border-radius: 20px;
+    filter: brightness(80%);
+    object-fit: cover;
+}
+
+#logements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 60px;
+    grid-column-gap: 60px;
+    background-color: #f6f6f6;
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.card-title h2 {
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+}
+
+.card {
+    position: relative;
+}
+
+.card h2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    color: white;
+    padding: 15px;
 }
