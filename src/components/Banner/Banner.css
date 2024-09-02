@@ -1,0 +1,32 @@
+.banner {
+    width: 1240px;
+    height: 223px;
+    padding-inline: 2rem;
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    margin-top: 65px;
+    background: rgba(0, 0, 0, 0,3);
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+}
+
+.banner img {
+    width: 1240px;
+    height: 223px;
+    border-radius: 25px;
+    object-fit: cover;
+    
+}
+
+.title-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 48px;
+}
