@@ -1,3 +1,7 @@
+:root {
+  --red:#ff6060
+}
+
 body {
   font-family: 'Roboto' sans-serif;
 }
