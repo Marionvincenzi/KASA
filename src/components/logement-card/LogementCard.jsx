@@ -18,6 +18,4 @@ const LogementCard = ({ logements }) => {
     );
 };
 
-  
-
 export default LogementCard;

@@ -1,18 +1,26 @@
-import logements from "../../datas/logement.json";
-import LogementCard from "../logement-card/LogementCard"
-import "./LogementCard.css"
+import info from "../../datas/logement.json";
+import { Link } from "react-router-dom";
 
-const LogementList = () => {
-    if (!logements || logements.length === 0) {
-        return <p>Aucun logement à afficher</p>
-    }
+const LogementsList = () => {
     return (
         <div className="logements-list">
-            {logements.map((logement) => (
-                <LogementCard logement={logement} key={logement.id} />
-            ))}
+            <main>
+                <section id="logements" className="logements">
+                    <article className="logements-cards">
+                        {info.map((logement) => (
+                            <div className="card" key={logement.id}>
+                                <Link to={`/fiche/${logement.id}`}>
+                                <div className="logements-container">
+                                    <h2>{logement.title}</h2>
+                                </div>
+                                </Link>
+                            </div>
+                        ))}
+                    </article>
+                </section>
+            </main>
         </div>
     )
 }
 
-export default LogementList
+export default LogementsList;
