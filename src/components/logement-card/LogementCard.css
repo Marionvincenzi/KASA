@@ -1,3 +1,7 @@
+body {
+    margin: auto;
+}
+
 article img {
     width: 340px;
     height: 340px;
@@ -12,6 +16,10 @@ article img {
     grid-row-gap: 60px;
     grid-column-gap: 60px;
     background-color: #f6f6f6;
+    padding: 0 50px;
+    border-radius: 25px;
+    width: 1240px;
+    margin: auto;
 }
 
 .card-link {
@@ -26,6 +34,7 @@ article img {
 
 .card {
     position: relative;
+    margin-top: 56px;
 }
 
 .card h2 {

@@ -1,5 +1,6 @@
 import "./Navbar.css"
 import logo from "../../assets/LOGO.png"
+import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
   return (
@@ -7,8 +8,22 @@ const Navbar = () => {
         <div className="navbar-logo">
             <img className="logo" src={logo} alt="Logo Kasa" />
         </div>
-        <div>Accueil</div>
-        <div>A propos</div>
+        <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "nav-link active-link" : "nav-link"
+            }
+          >
+            Accueil
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "nav-link active-link" : "nav-link"
+            }
+          >
+            À Propos
+          </NavLink>
     </nav>
   )
 }

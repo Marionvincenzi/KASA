@@ -3,13 +3,13 @@ body {
 }
 
 .banner {
-    max-width: 100%;
+    width: 1240px;
+    margin: auto;
     height: 223px;
     padding-inline: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
     margin-top: 65px;
     position: relative;
     overflow: hidden;
