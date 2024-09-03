@@ -1,0 +1,26 @@
+.banner-image {
+    width: 1024px;
+    height: 223px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.banner-about {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.container-about {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 0 20px;
+    text-align: left;
+}
+
+.about-collapse {
+    margin-bottom: 15px;
+}

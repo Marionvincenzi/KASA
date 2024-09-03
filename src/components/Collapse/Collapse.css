@@ -1,0 +1,29 @@
+.content {
+    background-color:#f0f0f0 ;
+    padding: 0.5rem;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius:5px ;
+    font-size: 1.125rem;
+    padding: 20px;
+}
+
+.content-parent {
+    height: 0px;
+    overflow: hidden;
+    transition: height ease 0.9s;
+}
+
+.toggle {
+    border: none;
+    background-color: #ff6060;
+    width: 100%;
+    text-align: left;
+    color: white;
+    height: 50px;
+    border-radius:5px ;
+    font-weight: 700;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
