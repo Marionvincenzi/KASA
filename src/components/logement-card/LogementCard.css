@@ -13,7 +13,6 @@ article img {
 #logements {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 60px;
     grid-column-gap: 60px;
     background-color: #f6f6f6;
     padding: 0 50px;
@@ -35,6 +34,7 @@ article img {
 .card {
     position: relative;
     margin-top: 56px;
+    margin-bottom: 40px;
 }
 
 .card h2 {

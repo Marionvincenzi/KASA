@@ -1,0 +1,23 @@
+.pageNotFound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+    gap: 70px;
+}
+
+.title-not-found {
+    font-size: 15rem;
+    margin: 5rem;
+    color: #ff6060;
+}
+
+.text-not-found {
+    color: #ff6060;
+    font-size: 2rem;
+}
+
+.error-link {
+    color: black;
+    margin-bottom: 5rem;
+}

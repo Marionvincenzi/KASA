@@ -1,34 +1,46 @@
-import React, { useRef, useState } from 'react';
-import './Collapse.css'; 
 
-const Collapse = (props) => {
-    const [isOpen, setIsOpen] =useState(false);
-    const contentRef = useRef();
+import React, { useState } from "react";
+import "./Collapse.css";
 
-    const toggle = () => {
-        setIsOpen(!isOpen);
-    };
+const Collapse = ({ title, content }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <div className={`collapse ${props.className}`}>
-            <button className='toggle' onClick={toggle}>
-                {props.label}
-                <i className= {`fa-solid ${isOpen ? "fa-chevron-down" : "fa-chevron-up"} `}>
-                </i>
-            </button>
-            <div className='content-parent'
-            ref={contentRef}
-            style={
-                isOpen 
-                ? { height : contentRef.current.scrollHeight + "px"}
-                : { height: "0px"}
-            }
-            >
-                <div className='content'> {props.children}</div>
+  return (
+    <div className="collapse-container">
+      <h3
+        className="collapse-container__title"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {title}
+        <div className="collapse-container__arrow-container">
+        <i className={`fa-solid ${isOpen ? "fa-chevron-down" : "fa-chevron-up"}`}></i>
+        </div>
+      </h3>
+      <div
+        className={
+          isOpen
+            ? "collapse-container__content is-open"
+            : "collapse-container__content"
+        }
+      >
+        <div
+          className={`collapse-container__content__text ${
+            isOpen ? "collapse-container__content__open" : ""
+          }`}
+        >
+          {Array.isArray(content) ? (
+            <ul>
+              {content.map((content, i) => (
+                <li key={content + "-" + i}>{content}</li>
+              ))}
+            </ul>
+          ) : (
+            <div>{content}</div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-                </div>
-            </div>
-    )
-}
-
-export default Collapse
+export default Collapse;
