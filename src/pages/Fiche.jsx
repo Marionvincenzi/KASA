@@ -1,37 +1,58 @@
-
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
 import logements from "../datas/logement.json";
 import "./Fiche.css";
 
 const Logement = () => {
-    const navigate = useNavigate();
-    const { id } = useParams();
-    const [activeLogement, setActiveLogement] = useState(null);
-    
-    useEffect(() => {
-        const index = logements.findIndex((logement) => logement.id === id);
-        if (index < 0) {
-            return navigate("/NotFound")
-        }
-        setActiveLogement(logements[index]);
+    const [activeLogement, setActiveLogement] = useState(logements[0]); // Juste pour exemple
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-    }, [id, navigate]);
+    const nextImage = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === activeLogement.pictures.length - 1 ? 0 : prevIndex + 1
+        );
+    };
 
- return (
-    <div className="logement-container">
-        <h1>{activeLogement.title}</h1>
-        <p>{activeLogement.description}</p>
+    const prevImage = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? activeLogement.pictures.length - 1 : prevIndex - 1
+        );
+    };
 
-        {activeLogement.equipements && activeLogement.equipements.length > 0 && (
-            <ul className="equipements-list">
-                {activeLogement.equipements.map((equipement, index) => (
-                    <li key={index}>{equipement}</li>
-                ))}
-            </ul>
-        )}
-    </div>
- )
-}
+    if (!activeLogement) {
+        return <div></div>;
+    }
 
-export default Logement
+    return (
+        <div className="logement-container">
+            <h1>{activeLogement.title}</h1>
+            <p>{activeLogement.description}</p>
+
+            {/* Carrousel d'images */}
+            {activeLogement.pictures && activeLogement.pictures.length > 0 && (
+                <div className="logement-carousel">
+                    <button className="carousel-button" onClick={prevImage}>
+                        &lt;
+                    </button>
+                    <img
+                        src={activeLogement.pictures[currentIndex]}
+                        alt={`${activeLogement.title} image ${currentIndex + 1}`}
+                        className="logement-carousel-image"
+                    />
+                    <button className="carousel-button" onClick={nextImage}>
+                        &gt;
+                    </button>
+                </div>
+            )}
+
+            {activeLogement.equipements && activeLogement.equipements.length > 0 && (
+                <ul className="equipements-list">
+                    {activeLogement.equipements.map((equipement, index) => (
+                        <li key={index}>{equipement}</li>
+                    ))}
+                </ul>
+            )}
+        </div>
+    );
+};
+
+export default Logement;
