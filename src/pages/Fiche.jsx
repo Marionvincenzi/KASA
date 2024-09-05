@@ -49,11 +49,10 @@ const Logement = () => {
                     <button className="arrow arrow_right" onClick={nextImage}>
                         &gt;
                     </button>
-                    <Collapse label="Description" className="collapse collapse-custom">
-                        <h1 className="description-title">
-                            {activeLogement.title}</h1>
-                        <p>{activeLogement.description}</p>
-                </Collapse>
+                    <Collapse label="Description" className="collapse custom-collapse">
+              <div>{logements.description}</div>
+            </Collapse>
+        
                 </div>
             )}
             
