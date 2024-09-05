@@ -1,8 +1,8 @@
 
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Collapse.css";
 
-const Collapse = ({ title, content }) => {
+const Collapse = ({ title, content, }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -13,7 +13,10 @@ const Collapse = ({ title, content }) => {
       >
         {title}
         <div className="collapse-container__arrow-container">
+          <button className="Collapse" onClick={Collapse}>
+            {Collapse.label}
         <i className={`fa-solid ${isOpen ? "fa-chevron-down" : "fa-chevron-up"}`}></i>
+        </button>
         </div>
       </h3>
       <div

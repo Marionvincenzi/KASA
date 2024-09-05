@@ -7,9 +7,9 @@ import "./Caroussel.css"
 const Caroussel = ({ activeLogement }) => {
     const [pictureIndex, setPictureIndex] = useState(0);
     
-    const nextPicture = () => {
+    const nextPicture = () => {        
         let newIndex = pictureIndex + 1;
-        if (newIndex > activeLogement.pictures.length - 1) {
+        if (newIndex >= activeLogement.pictures.length - 1) {
             newIndex = 0;
         }
         setPictureIndex(newIndex);

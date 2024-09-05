@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import logements from "../datas/logement.json";
+import Collapse from "../components/Collapse/Collapse";
 import "./Fiche.css";
 import { useParams } from "react-router-dom";
 
@@ -10,9 +11,11 @@ const Logement = () => {
 
     useEffect(() => {
         const logement = logements.find((logement) => logement.id === id);
-        setActiveLogement(logement)
-        setCurrentIndex(0);
-    })
+        if (logement) {
+          setActiveLogement(logement);
+          setCurrentIndex(0);
+        }
+      }, [id]);
     const nextImage = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex === activeLogement.pictures.length - 1 ? 0 : prevIndex + 1
@@ -35,7 +38,7 @@ const Logement = () => {
             {/* Carrousel d'images */}
             {activeLogement.pictures && activeLogement.pictures.length > 0 && (
                 <div className="logement-carousel">
-                    <button className="carousel-button" onClick={prevImage}>
+                    <button className="arrow arrow_left" onClick={prevImage}>
                         &lt;
                     </button>
                     <img
@@ -43,11 +46,14 @@ const Logement = () => {
                         alt={`${activeLogement.title} image ${currentIndex + 1}`}
                         className="logement-carousel-image"
                         />
-                    <button className="carousel-button" onClick={nextImage}>
+                    <button className="arrow arrow_right" onClick={nextImage}>
                         &gt;
                     </button>
-                        <h1>{activeLogement.title}</h1>
+                    <Collapse label="Description" className="collapse collapse-custom">
+                        <h1 className="description-title">
+                            {activeLogement.title}</h1>
                         <p>{activeLogement.description}</p>
+                </Collapse>
                 </div>
             )}
             
@@ -60,7 +66,7 @@ const Logement = () => {
                 <p className="host-name">{activeLogement.host.name}</p>
                 </div>
            )}
-
+     <Collapse label="Équipements" className="collapse collapse-custom">
             {activeLogement.equipments && activeLogement.equipments.length > 0 && (
                 <ul className="equipments-list">
                     {activeLogement.equipments.map((equipement, index) => (
@@ -69,6 +75,7 @@ const Logement = () => {
                     ))}
                 </ul>
             )}
+            </Collapse>
         </div>
     );
 };
