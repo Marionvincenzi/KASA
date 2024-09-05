@@ -1,6 +1,8 @@
-
 import { Link } from "react-router-dom";
 import "./LogementCard.css";
+import logements from "../../datas/logement.json"
+
+
 const LogementCard = ({ logement }) => {
   return (
     <article className="card">

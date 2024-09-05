@@ -1,6 +1,7 @@
 import { useState } from "react"
 import arrowLeft from "../../assets/arrow_left.png"
 import arrowRight from "../../assets/arrow_right.png"
+import "./Caroussel.css"
 
 
 const Caroussel = ({ activeLogement }) => {
