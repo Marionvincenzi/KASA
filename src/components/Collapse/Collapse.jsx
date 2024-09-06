@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./Collapse.css";
 
-const Collapse = ({ title, content, }) => {
+const Collapse = ({ title, content, className}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -10,6 +10,7 @@ const Collapse = ({ title, content, }) => {
   }
 
   return (
+    <div className={`collapse ${className}`}>
     <div className="collapse-container">
       <h3
         className="collapse-container__title"
@@ -21,6 +22,7 @@ const Collapse = ({ title, content, }) => {
         <i className={`fa-solid ${isOpen ? "fa-chevron-down" : "fa-chevron-up"}`}></i>
         </div>
       </h3>
+      </div>
       <div
         className={
           isOpen

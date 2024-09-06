@@ -1,0 +1,57 @@
+.logement-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logement-carousel {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.logement-carousel img {
+    border-radius: 10px;
+    width: 1240px;
+    max-height: 410px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+.arrow_left {
+    left: 10px;
+}
+
+.arrow_right {
+    right: 10px;
+}
+
+.host-picture {
+    border-radius: 50%;
+}
+
+.host-info {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.collapse-description {
+    width: 582px;
+}
+
+.collapse-equipments {
+    width: 582px;
+}

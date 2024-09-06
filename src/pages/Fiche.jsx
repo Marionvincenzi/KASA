@@ -4,6 +4,7 @@ import Collapse from "../components/Collapse/Collapse";
 import "./Fiche.css";
 import { useParams } from "react-router-dom";
 
+
 const Logement = () => {
     const { id } = useParams()
     const [activeLogement,setActiveLogement] = useState(logements[0]); // Juste pour exemple
@@ -60,11 +61,11 @@ const Logement = () => {
             
            {activeLogement.host && (
             <div className="host-info">
+                <p className="host-name">{activeLogement.host.name}</p>
                 <img 
                 src={activeLogement.host.picture}
                 alt={activeLogement.host.name}
                 className="host-picture" />
-                <p className="host-name">{activeLogement.host.name}</p>
                 </div>
            )}
      <Collapse title="Équipements" content={activeLogement.equipments}  className=" collapse collapse-equipments">
