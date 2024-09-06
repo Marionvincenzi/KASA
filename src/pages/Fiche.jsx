@@ -4,6 +4,9 @@ import Collapse from "../components/Collapse/Collapse";
 import "./Fiche.css";
 import { useParams } from "react-router-dom";
 
+import arrowLeft from "../assets/arrow_left.png"
+import arrowRight from "../assets/arrow_right.png"
+
 
 const Logement = () => {
     const { id } = useParams()
@@ -40,7 +43,8 @@ const Logement = () => {
             {activeLogement.pictures && activeLogement.pictures.length > 0 && (
                 <div className="logement-carousel">
                     <button className="arrow arrow_left" onClick={prevImage}>
-                        &lt;
+                        <img src={arrowLeft} alt="Fleche de droite" className="arrow-container"/>
+                    
                     </button>
                     <img
                         src={activeLogement.pictures[currentIndex]}
@@ -48,13 +52,16 @@ const Logement = () => {
                         className="logement-carousel-image"
                         />
                     <button className="arrow arrow_right" onClick={nextImage}>
-                        &gt;
+                        <img src={arrowRight} alt="Fleche de droite" className="arrow-container"/>
                     </button>
+
+                    <section className="second-container">
                     <Collapse title="Description" content={activeLogement.description}  className="collapse collapse-description">
               <div>
                 {activeLogement.description}
                 </div>
             </Collapse>
+            </section>
         
                 </div>
             )}
@@ -68,6 +75,7 @@ const Logement = () => {
                 className="host-picture" />
                 </div>
            )}
+           <section className="second-container">
      <Collapse title="Équipements" content={activeLogement.equipments}  className=" collapse collapse-equipments">
             {activeLogement.equipments && activeLogement.equipments.length > 0 && (
                 <ul className="equipments-list">
@@ -78,6 +86,7 @@ const Logement = () => {
                 </ul>
             )}
             </Collapse>
+            </section>
         </div>
     );
 };

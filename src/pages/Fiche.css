@@ -13,17 +13,21 @@
 
 .logement-carousel img {
     border-radius: 10px;
-    width: 1240px;
     max-height: 410px;
     object-fit: cover;
     object-position: center;
+    width: 1240px;
+}
+
+.arrow-container {
+    width: 50px !important;
 }
 
 .arrow {
     position: absolute;
-    top: 50%;
+    top: 45%;
     border: none;
-    font-size: 50px;
+    font-size: 10px;
     cursor: pointer;
     padding: 10px;
     background-color: transparent;
@@ -54,4 +58,9 @@
 
 .collapse-equipments {
     width: 582px;
+}
+
+.second-container {
+    display: flex;
+    flex-direction: column;
 }
