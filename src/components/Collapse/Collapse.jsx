@@ -5,18 +5,20 @@ import "./Collapse.css";
 const Collapse = ({ title, content, }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleCollapse = () => {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <div className="collapse-container">
       <h3
         className="collapse-container__title"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleCollapse}
       >
         {title}
         <div className="collapse-container__arrow-container">
-          <button className="Collapse" onClick={Collapse}>
-            {Collapse.label}
+        
         <i className={`fa-solid ${isOpen ? "fa-chevron-down" : "fa-chevron-up"}`}></i>
-        </button>
         </div>
       </h3>
       <div
