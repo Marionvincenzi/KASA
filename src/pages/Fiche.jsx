@@ -49,7 +49,7 @@ const Logement = () => {
                     <button className="arrow arrow_right" onClick={nextImage}>
                         &gt;
                     </button>
-                    <Collapse title="Description" content={activeLogement.description}  className="collapse custom-collapse">
+                    <Collapse title="Description" content={activeLogement.description}  className="collapse collapse-description">
               <div>
                 {activeLogement.description}
                 </div>
@@ -67,7 +67,7 @@ const Logement = () => {
                 <p className="host-name">{activeLogement.host.name}</p>
                 </div>
            )}
-     <Collapse title="Équipements" content={activeLogement.equipments}  className="collapse collapse-custom">
+     <Collapse title="Équipements" content={activeLogement.equipments}  className=" collapse collapse-equipments">
             {activeLogement.equipments && activeLogement.equipments.length > 0 && (
                 <ul className="equipments-list">
                     {activeLogement.equipments.map((equipement, index) => (
