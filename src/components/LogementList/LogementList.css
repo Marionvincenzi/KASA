@@ -2,12 +2,8 @@
     padding: 55px 50px 45px 50px ;
     background-color: #f6f6f6;
     border-radius: 25px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 60px;
-    grid-row-gap: 50px;
     margin-bottom: 50px;
-    width: 1240px;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -28,7 +24,6 @@ article img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 60px;
-    background-color: #f6f6f6;
     padding: 0 50px;
     border-radius: 25px;
     margin: auto;
@@ -67,4 +62,25 @@ article img {
         padding: inherit;
         margin-bottom: 0px;
     }
+}
+
+@media (max-width: 768px) {
+    .logements-list {
+        padding-left: 25px;
+        padding-right: 25px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        width: 335px;
+    }
+
+    #logements {
+        display: grid;
+       grid-template-columns: 1fr;
+       justify-items: center;
+        background-color: white;
+        padding: 0px;
+    }
+
+
 }
