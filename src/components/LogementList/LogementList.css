@@ -7,6 +7,9 @@
     grid-column-gap: 60px;
     grid-row-gap: 50px;
     margin-bottom: 50px;
+    width: 1240px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 body {
@@ -28,7 +31,6 @@ article img {
     background-color: #f6f6f6;
     padding: 0 50px;
     border-radius: 25px;
-    width: 1240px;
     margin: auto;
 }
 

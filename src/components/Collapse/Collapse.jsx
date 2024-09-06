@@ -53,12 +53,12 @@ const Collapse = ({ title, content, className}) => {
 
 // Ajout des PropTypes pour valider les props
 Collapse.propTypes = {
-  title: PropTypes.string.isRequired,      // 'title' doit être une chaîne de caractères
-  content: PropTypes.oneOfType([           // 'content' peut être soit une chaîne soit un tableau
+  title: PropTypes.string.isRequired,     
+  content: PropTypes.oneOfType([           
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string)
   ]).isRequired,
-  className: PropTypes.string,             // 'className' est une chaîne de caractères facultative
+  className: PropTypes.string,            
 };
 
 export default Collapse;
