@@ -3,7 +3,7 @@
     background-color: #f6f6f6;
     border-radius: 25px;
     margin-bottom: 50px;
-    width: 90%;
+    width: 93%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -43,6 +43,7 @@ article img {
     position: relative;
     margin-top: 56px;
     margin-bottom: 40px;
+    width: 340px;
 }
 
 .card h2 {
@@ -81,6 +82,5 @@ article img {
         background-color: white;
         padding: 0px;
     }
-
 
 }
