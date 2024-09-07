@@ -5,7 +5,12 @@
     margin-bottom: 50px;
     width: 93%;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto; 
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 60px;
+    row-gap: 50px;
 }
 
 body {
@@ -18,15 +23,6 @@ article img {
     border-radius: 20px;
     filter: brightness(80%);
     object-fit: cover;
-}
-
-#logements {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 60px;
-    padding: 0 50px;
-    border-radius: 25px;
-    margin: auto;
 }
 
 .card-link {
@@ -43,7 +39,7 @@ article img {
     position: relative;
     margin-top: 56px;
     margin-bottom: 40px;
-    width: 340px;
+    width: 30%;
 }
 
 .card h2 {

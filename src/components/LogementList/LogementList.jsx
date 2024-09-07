@@ -4,9 +4,8 @@ import "./LogementList.css"
 
 const LogementsList = () => {
   return (
-    <div className="logements-list">
-      <main>
-        <section id="logements" className="logements">
+    <section className="logements-list">
+             
           {logements.map((logement) => (
             <article key={logement.id} className="card">
               <Link to={`/logement/${logement.id}`} className="card-link">
@@ -20,8 +19,7 @@ const LogementsList = () => {
             </article>
           ))}
         </section>
-      </main>
-    </div>
+  
   );
 };
 

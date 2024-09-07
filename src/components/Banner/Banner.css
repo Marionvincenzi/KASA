@@ -55,20 +55,14 @@ body {
         height: 111px;
         width: 70%;
         border-radius: 10px;
-        margin-top: 0;
+        min-height: inherit;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
-    .overlay {
-        height: 111px;
-    }
-
-    .banner-img{
-        height: 111px;
-    }
  
     .title-text {
         width: auto;
-        height: 111px;
         font-size: 1.5rem;
         font-weight: 500;
     }

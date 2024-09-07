@@ -7,7 +7,8 @@ import Fiche from "./pages/Fiche";
 import NotFound from "./pages/NotFound";
 function App() {
   return (
-    <div>
+    <>
+    <div className="wrapper">
       <Navbar />
       
       <Routes>
@@ -16,8 +17,9 @@ function App() {
         <Route path="/logement/:id" element={<Fiche />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
     </div>
+      <Footer />
+      </>
   );
 }
 export default App;
