@@ -35,6 +35,7 @@ const Logement = () => {
       {/* Carrousel d'images */}
       {activeLogement.pictures && activeLogement.pictures.length > 0 && (
         <div className="logement-carousel">
+          {activeLogement.pictures.length > 1 && (
           <button className="arrow arrow_left" onClick={prevImage}>
             <img
               src={arrowLeft}
@@ -42,11 +43,14 @@ const Logement = () => {
               className="arrow-container"
             />
           </button>
+          )}
+
           <img
             src={activeLogement.pictures[currentIndex]}
             alt={`${activeLogement.title} image ${currentIndex + 1}`}
             className="logement-carousel-image"
           />
+      {activeLogement.pictures.length > 1 &&(
           <button className="arrow arrow_right" onClick={nextImage}>
             <img
               src={arrowRight}
@@ -54,6 +58,7 @@ const Logement = () => {
               className="arrow-container"
             />
           </button>
+      )}
       <div className="dots">
         {`${currentIndex + 1}/${activeLogement.pictures.length}`}
       </div>

@@ -3,18 +3,15 @@
     background-color: #f6f6f6;
     border-radius: 25px;
     margin-bottom: 50px;
-    width: 93%;
-    margin-right: auto;
-    margin-left: auto; 
-     display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 60px;
     row-gap: 50px;
-}
-
-body {
+    max-width: 1240px;
     margin: auto;
+    width: 100%;
+    margin-top: 43px;
 }
 
 article img {
@@ -39,7 +36,7 @@ article img {
     position: relative;
     margin-top: 56px;
     margin-bottom: 40px;
-    width: 30%;
+    flex: 1 1 calc(30% - 20px);
 }
 
 .card h2 {
@@ -51,32 +48,26 @@ article img {
     padding: 15px;
 }
 
-@media (max-width: 1024px) {
-    .logements-list {
-        background-color: inherit;
-        grid-template-columns: 1fr;
-        grid-row-gap: 20px;
-        padding: inherit;
-        margin-bottom: 0px;
+@media (max-width: 1024px){
+    .card {
+        flex: 1 1 calc(45% -20px);
     }
 }
 
 @media (max-width: 768px) {
     .logements-list {
-        padding-left: 25px;
-        padding-right: 25px;
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
-        width: 335px;
+        padding: 0 25px;
+        width: 100%;
+        background-color: transparent;
+        margin-bottom: 27px;
     }
 
-    #logements {
-        display: grid;
-       grid-template-columns: 1fr;
-       justify-items: center;
-        background-color: white;
-        padding: 0px;
+    .card {
+        width: 100%;
+        margin: 0;
     }
 
 }
