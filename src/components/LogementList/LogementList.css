@@ -1,3 +1,7 @@
+body {
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 .logements-list {
     padding: 55px 50px 45px 50px ;
     background-color: #f6f6f6;
@@ -15,7 +19,7 @@
 }
 
 article img {
-    width: 340px;
+    width: 100%;
     height: 340px;
     border-radius: 20px;
     filter: brightness(80%);
@@ -37,6 +41,7 @@ article img {
     margin-top: 56px;
     margin-bottom: 40px;
     flex: 1 1 calc(30% - 20px);
+    width: 100%;
 }
 
 .card h2 {
@@ -56,18 +61,24 @@ article img {
 
 @media (max-width: 768px) {
     .logements-list {
+        padding: 50px 0px;
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
-        padding: 0 25px;
         width: 100%;
         background-color: transparent;
         margin-bottom: 27px;
     }
 
     .card {
-        width: 100%;
+        flex: 1 1 auto;
         margin: 0;
     }
+
+    article img {
+        max-height: 200px;
+    }
+    
+
 
 }
