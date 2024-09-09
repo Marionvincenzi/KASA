@@ -5,6 +5,7 @@ import "./LogementList.css"
 const LogementsList = () => {
   return (
     <section className="logements-list">
+
              
           {logements.map((logement) => (
             <article key={logement.id} className="card">
@@ -18,6 +19,7 @@ const LogementsList = () => {
               </Link>
             </article>
           ))}
+
         </section>
   
   );
