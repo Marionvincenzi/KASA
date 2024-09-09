@@ -7,7 +7,6 @@ body, html {
 .logement-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 .logement-carousel {
@@ -58,13 +57,12 @@ body, html {
    color: #ff6060;
    margin-right: 10px;
    text-align: end; 
-   width: 100px;
+   width: 80px;
 }
 
 .host-info {
     display: flex;
     align-items: center;
-    justify-content: end;
 }
 
 .collapse-description {
@@ -105,9 +103,7 @@ body, html {
     margin-right: 10px;
 }
 
-.container-title {
-    width: 635px;
-}
+
 
 .container-title .title {
     color: #ff6060;
@@ -157,4 +153,8 @@ body, html {
         margin: 0;
         padding: 0;
         }
+     
+        .container-title .title {
+            font-size: 18px;
+        }    
 }

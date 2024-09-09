@@ -12,7 +12,7 @@ body {
     justify-content: center;
     column-gap: 60px;
     row-gap: 50px;
-    max-width: 1240px;
+    max-width: 1160px;
     margin: auto;
     width: 100%;
     margin-top: 43px;
@@ -68,6 +68,8 @@ article img {
         width: 100%;
         background-color: transparent;
         margin-bottom: 27px;
+        max-width: 1240px;
+        min-width: 390px;
     }
 
     .card {
