@@ -60,11 +60,14 @@ article img {
         margin-bottom: 27px;
         max-width: 1240px;
         min-width: 390px;
+        gap: 20px;
+        margin-top: 0;
     }
 
     .card {
         flex: 1 1 auto;
         margin: 0;
+        width: 100%;
     }
 
     article img {
