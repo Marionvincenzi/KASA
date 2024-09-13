@@ -21,3 +21,19 @@
     color: black;
     margin-bottom: 5rem;
 }
+
+@media (max-width: 768px) {
+    .pageNotFound {
+        padding: 0 50px;
+        text-align: center;
+    }
+    
+    .title-not-found{
+        font-size: 6rem;
+        margin-bottom: 0;
+    }
+
+    .text-not-found {
+        font-size: 1.125rem;
+    }
+}
