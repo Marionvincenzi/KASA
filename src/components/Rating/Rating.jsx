@@ -2,11 +2,11 @@ import "../Rating/rating.css"
 import PropTypes from "prop-types"
 
 const Rating = ({ rating }) => {
-    const totalStars = 5;
+    const defaultStars = 5;
   
     return (
       <div className="rates">
-        {[...Array(totalStars)].map((_, index) => {
+        {[...Array(defaultStars)].map((_, index) => {
           return (
             <i
               key={index}

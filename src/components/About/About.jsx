@@ -1,5 +1,5 @@
 import Image from "../../assets/banner2.png";
-import "../Apropos/Apropos.css";
+import "../About/About.css";
 import aboutContent from "../../datas/about-us.json";
 import Collapse from "../Collapse/Collapse"
 
