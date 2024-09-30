@@ -5,6 +5,8 @@ import { Route, Routes } from "react-router-dom";
 import About from "./components/About/About";
 import Form from "./pages/Form";
 import NotFound from "./pages/NotFound";
+
+
 function App() {
   return (
     <>
@@ -16,6 +18,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/logement/:id" element={<Form />} />
         <Route path="*" element={<NotFound />} />
+        <Route Component={NotFound} />
       </Routes>
     </div>
       <Footer />

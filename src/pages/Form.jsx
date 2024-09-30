@@ -3,6 +3,7 @@ import logements from "../datas/logement.json";
 import Collapse from "../components/Collapse/Collapse";
 import Rating from "../components/Rating/Rating"
 import Carousel from "../components/Carousel/Carousel"
+import NotFound from "../pages/NotFound"
 import "./Form.css";
 import { useParams } from "react-router-dom";
 
@@ -10,17 +11,19 @@ import { useParams } from "react-router-dom";
 
 const Logement = () => {
   const { id } = useParams();
-  const [activeListing, setActiveLogement] = useState(logements[0]); // Juste pour exemple
+  const [activeListing, setActiveLogement] = useState(null)
   
   useEffect(() => {
-    const logement = logements.find((logement) => logement.id === id);
+    const logement = logements.find((logement) => logement.id === String(id));
     if (logement) {
       setActiveLogement(logement);
     }
   }, [id]);
   
-  if (!activeListing) {
-    return <div></div>;
+  if(!activeListing) {
+    return (
+      <NotFound />
+    )
   }
   return (
     <div className="logement-container">

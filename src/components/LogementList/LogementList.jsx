@@ -9,7 +9,7 @@ const LogementsList = ({logements}) => {
              
 {Array.isArray(logements) && logements.map((logement) => (
             <article key={logement.id} className="card">
-              <Link to={`/logement/${logement.id}`} className="card-link">
+            <Link to={`/logement/${logement.id}`} className="card-link">
              <div className="img-container">
               <img src={logement.cover} alt={logement.title} className="card-image" />
              </div>
